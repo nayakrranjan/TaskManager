@@ -1,4 +1,4 @@
-package com.taskmanager.Models;
+package com.taskmanager.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

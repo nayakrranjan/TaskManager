@@ -1,4 +1,4 @@
-package com.taskmanager.Models;
+package com.taskmanager.model;
 
 public enum ApprovalStatus {
     PENDING, APPROVED, REJECTED
