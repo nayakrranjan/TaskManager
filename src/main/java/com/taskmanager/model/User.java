@@ -1,4 +1,4 @@
-package com.taskmanager.Models;
+package com.taskmanager.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -17,7 +17,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private Long userId;
+    private Long Id;
 
     @Column(unique = true, nullable = false, length = 50)
     private String username;
@@ -31,4 +31,10 @@ public class User {
     @Column(name = "created_at")
     @CreationTimestamp
     private LocalDateTime createdAt;
+
+    public User(String name, String email, String password) {
+        this.username = name;
+        this.email = email;
+        this.passwordHash = password;
+    }
 }
